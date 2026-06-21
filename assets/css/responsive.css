@@ -1,0 +1,600 @@
+/*
+|---------------------------------------------------------
+| RESPONSIVE WHEN < 1200PX                               
+|---------------------------------------------------------
+|
+*/
+
+@media only screen and (max-width: 1200px) {
+
+    /*
+    |---------------------------------------------------------
+    | FEATRUES SECTION                                 1200PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .features-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-card-icon {
+        width: 100px;
+        height: 100px;
+        background-size: 44px 56px;
+    }
+
+}
+
+/*
+|---------------------------------------------------------
+| RESPONSIVE WHEN < 1024PX                               
+|---------------------------------------------------------
+|
+*/
+
+@media only screen and (max-width: 1024px) {
+
+    /*
+    |---------------------------------------------------------
+    | GLOBAL STYLES                                    1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    /* Section Header */
+
+    .section-header-wq {
+        flex-direction: column;
+    }
+
+    .section-header-wq .section-header-lft  {
+        width: 100%;
+        max-width: none;
+    }
+
+    .section-header-rgt {
+        width: 100%;
+        align-items: center;
+        background-position: 10%;
+    }
+
+    :root {
+
+        /* Margins and Paddings */
+        --section-padding-06-12: 60px 0 60px;
+        --section-padding-12-06: 60px 0 60px;
+        --section-padding-10-12: 60px 0 60px;
+        --section-padding-12-12: 60px 0 60px; 
+        --section-padding-12-10: 60px 0 60px; 
+        --section-padding-0-12: 0 0 60px;
+
+    }
+
+    /*
+    |---------------------------------------------------------
+    | MAIN HEADER                                      1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .header-logo-img {
+        width: 120px;
+    }
+
+    .header-ui-ctr {
+        width: auto;
+    }
+
+
+    /*
+    |---------------------------------------------------------
+    | MAIN MENU                                        1024PX
+    |---------------------------------------------------------
+    |
+    */
+    
+    .hamburger-label {
+        display: block;
+        visibility: visible;
+    }
+    
+    .hamburger-icon {
+        width: 40px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    
+    .hamburger-icon:before, 
+    .hamburger-icon div, 
+    .hamburger-icon:after {
+        background-color: #fff;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 7px 0;
+        transition: transform .3s ease-in-out;
+    }
+    
+    .hamburger:checked + .hamburger-label > .hamburger-icon:before {
+        transform: translateY(12px) rotate(135deg);
+    }
+        
+    .hamburger:checked + .hamburger-label > .hamburger-icon div {
+        transform: scale(0);
+    }
+        
+    .hamburger:checked + .hamburger-label > .hamburger-icon:after {
+        transform: translateY(-12px) rotate(-135deg);
+    }
+    
+    .main-nav {
+        display: none;
+        visibility: hidden;
+    }
+    
+    .main-nav ul {
+        z-index: 99999;
+        display: block;
+        width: 90%;
+        padding: 0;
+        margin: 48px 0 0 0;
+        font-size: 18px;
+        text-align: center;
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+    
+    .hamburger:checked ~ .main-nav {
+        display: block;
+        visibility: visible;
+    }
+    
+    .main-nav ul li {
+        margin: 0;
+        padding: 20px 40px;
+        background-color: var(--purple-darker);
+    }
+
+    .main-nav ul li:first-child { 
+        padding-top: 40px; 
+        border-radius: 24px 24px 0 0;
+    }
+    .main-nav ul li:last-child { 
+        padding-bottom: 40px; 
+        border-radius: 0 0 24px 24px;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | HERO SECTION                                     1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .hero-section-ui {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-section-lft-ui {
+        text-align: center;
+    }
+
+    .hero-section-h1 {
+        font-size: 48px;
+        line-height: 68px;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-section-img-div {
+        height: 400px;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | FEATRUES SECTION                                 1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .features-card {
+        padding: 24px 18px;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | PRODUCTS SECTION                                 1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .product-cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .product-certificate {
+        margin-top: 0;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | CERTIFICATES SECTION                             1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .certificates-ui {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .certificate-image-div {
+        width: 15%;
+    }
+
+    .certificate-info {
+        width: 85%;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | CERTIFICATES SECTION V2                          1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .certificates-ui-v2 {
+        gap: 48px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .certificate-v1-image-div {
+        width: 15%;
+    }
+
+    .certificate-info-v1 {
+        width: 85%;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | ABOUT MASCOT SECTION                             1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .about-mascot-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-mascot-content-lft {
+        grid-column: span 2; 
+    }
+
+    .about-mascot-content-rgt {
+        max-height: none;
+        grid-column: span 1;
+    }
+
+    .about-mascot-3d-mascot {
+        width: 100%;
+        aspect-ratio: auto;
+        background-position: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | ABOUT US SECTION                                 1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .about-us-ui {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-us-ui-img-div {
+        max-height: 200px;
+    }
+
+    .about-us-ui-img-div {
+        background-position: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | FAQ SECTION                                      1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .faq-container {
+        flex-direction: column;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | RATINGS SECTION                                  1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .ratings-certificate-img {
+        max-width: 140px;
+    }
+
+    .ratings-ui-rgt {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
+
+/*
+|---------------------------------------------------------
+| RESPONSIVE WHEN < 768PX                         
+|---------------------------------------------------------
+|
+*/
+
+@media only screen and (max-width: 768px) {
+
+    /*
+    |----------------------------------------------
+    | GLOBAL STYLES                          768PX
+    |----------------------------------------------
+    */
+
+    /*
+    |---------------------------------------------------------
+    | PRODUCTS SECTION                                  768PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .product-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /*
+    |---------------------------------------------------------
+    | ABOUT MASCOT SECTION                              768PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .about-mascot-content {
+        gap: 24px 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .about-mascot-content-rgt {
+        min-height: 200px;
+    }
+
+    .about-mascot-3d-mascot {
+        background-position: center;
+    } 
+
+    /*
+    |---------------------------------------------------------
+    | RATINGS SECTION                                   768PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .ratings-ui {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*
+    |---------------------------------------------------------
+    | MAIN FOOTER                                       768PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .footer-top {
+        text-align: center;
+    }
+
+    .footer-nav ul {
+        gap: 24px;
+        text-align: center;
+        flex-direction: column;
+    }
+    
+}
+
+/*
+|---------------------------------------------------------
+| RESPONSIVE WHEN < 568PX                         
+|---------------------------------------------------------
+|
+*/
+
+@media only screen and (max-width: 568px) {
+
+    /*
+    |---------------------------------------------------------
+    | GLOBAL STYLES                                     568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    /* Section Header */
+    .section-header {
+        padding-bottom: 20px;
+    }
+
+    .section-header-lft {
+        display: flex;
+        gap: 12px;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;  
+        flex-direction: column;
+    }
+
+    .section-mascot {
+        height: 80px;   
+    }
+
+    .section-header-h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .section-header-rgt {
+        text-align: center;
+        background-position: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | MAIN HEADER                                       568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .header-logo-img {
+        width: 100px;
+    }
+
+
+
+    /*
+    |---------------------------------------------------------
+    | HERO SECTION                                      568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .hero-section-h1 {
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | FEATRUES SECTION                                  568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .features-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*
+    |---------------------------------------------------------
+    | PRODUCTS SECTION                                  568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .product-cards {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /*
+    |---------------------------------------------------------
+    | CERTIFICATES SECTION                             568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .certificate {
+        flex-direction: column;
+    }
+
+    .certificate-image-div {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .certificate-image {
+        max-width: 140px;
+    }
+
+    .certificate-info {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | CERTIFICATES SECTION V2                           568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .certificate-v1 {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .certificate-v1-image-div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .certificate-image-v1 {
+        width: 25%;
+        min-width: 120px;
+    }
+
+    .certificate-info-v1 {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | ABOUT MASCOT SECTION                              568PX
+    |---------------------------------------------------------
+    |
+    */
+    
+    .about-mascot-txt  {
+        text-align: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | ABOUT US SECTION                                 1024PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .about-us-ui-lft-content {
+        text-align: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | MAIN FOOTER                                       568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .footer-bottom-info {
+        text-align: center;
+        flex-direction: column;
+    }
+
+}
