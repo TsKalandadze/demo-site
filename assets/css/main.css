@@ -569,23 +569,22 @@ body {
 
 .product-buy-logos-div {
     display: flex;
-    gap: 24px;
-    align-items: center;
-    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
 }
 
 .product-buy-logo-a {
     display: block;
-    width: 120px;
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    border-radius: 8px;
     text-decoration: none;
+    background-color: #6B7BD3;
 }
 
 .product-buy-logo {
     width: 100%;
-}
-
-.product-buy-logo-ph {
-    width: 140px;
 }
 
 /*
@@ -675,33 +674,107 @@ body {
     background-image: url('../media/images/drbaby-mascot-small-4.webp');
 }
 
-.about-mascot-content-lft {
+.diagram {
+    position: relative;              
+    display: grid;
+    gap: 24px;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "left image right";
+}
+
+.col {               
     display: flex;
+    gap: 64px;
     flex-direction: column;
     justify-content: center;
 }
+  
+.col.left { 
+    grid-area: left; 
+}
+.col.right { 
+    grid-area: right; 
+}
 
-.about-mascot-txt {
+.feature span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: var(--main-purple);
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    font-feature-settings: "case" on;
+}
+
+.col.left .feature span { 
+    flex-direction: row-reverse; 
+    justify-content: flex-end; 
+}
+
+.feature p {
+    margin: 0;
     font-size: 15px;
-    line-height: 28px;
-    margin-top: 0;
+    line-height: 24px;
     color: var(--main-txt);
     font-family: var(--font-regular);
     font-weight: var(--font-weight-medium);
 }
 
-.about-mascot-content-rgt {
-    max-height: 496px;
+.col.left .feature p, .col.left .feature span { text-align: left; }
+
+.bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--purple-darker);
+    flex: none;
 }
 
-.about-mascot-3d-mascot {
+.image-col { 
+    grid-area: image; 
+    position: relative; 
+}
+
+.image-wrap { 
+    position: relative; 
+    width: 100%; 
+}
+
+.mascot-section-toy-img {
+    width: 100%;
+}
+
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--purple-darker);
+    box-shadow: 0 0 0 4px rgba(47,87,201,0.15);
+    transform: translate(-50%,-50%);
+}
+
+#dot-eye { top:37%; left:75%; }
+#dot-cross { top:72.5%; left:52%; }
+#dot-cuff { top:60.5%; left:27%; }
+
+svg.connectors {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    aspect-ratio:  617 / 496;
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url('../media/images/drbaby-3d-mascot-6.webp');
+    pointer-events: none;
+    overflow: visible;
+}
+  
+.connector-line {
+    stroke: var(--purple-darker);
+    stroke-width: 1.5;
+    stroke-dasharray: 4 4;
 }
 
 /*
@@ -979,15 +1052,11 @@ body {
 }
 
 .footer-buy-logo-a {
-    max-width: 80px;
+    max-width: 40px;
 }
 
 .footer-buy-logo {
     width: 100%;
-}
-
-.footer-buy-logo-ph {
-    max-width: 120px;
 }
 
 .footer-info-txt {

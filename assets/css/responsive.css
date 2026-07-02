@@ -223,14 +223,6 @@
         margin-top: 0;
     }
 
-    .product-buy-logo-a {
-        width: 100px;
-    }
-
-    .product-buy-logo-ph {
-        width: 120px;
-    }
-
     /*
     |---------------------------------------------------------
     | CERTIFICATES SECTION                             1024PX
@@ -277,24 +269,18 @@
     |
     */
 
-    .about-mascot-content {
-        grid-template-columns: repeat(3, 1fr);
+    .diagram {
+        display: block;
     }
 
-    .about-mascot-content-lft {
-        grid-column: span 2; 
+    .image-col {
+        margin: 36px auto 24px;
+        max-width: 360px;
     }
 
-    .about-mascot-content-rgt {
-        max-height: none;
-        grid-column: span 1;
-    }
-
-    .about-mascot-3d-mascot {
-        width: 100%;
-        aspect-ratio: auto;
-        background-position: center;
-    }
+    #dot-eye { top: 37%; left: 30%; }
+    #dot-cross { top: 72.5%; left: 52%; }
+    #dot-cuff { top: 10%; left: 27%; }
 
     /*
     |---------------------------------------------------------
@@ -376,18 +362,6 @@
     |
     */
 
-    .about-mascot-content {
-        gap: 24px 0;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .about-mascot-content-rgt {
-        min-height: 200px;
-    }
-
-    .about-mascot-3d-mascot {
-        background-position: center;
-    } 
 
     /*
     |---------------------------------------------------------
@@ -473,8 +447,6 @@
     .header-logo-img {
         width: 100px;
     }
-
-
 
     /*
     |---------------------------------------------------------
@@ -566,19 +538,50 @@
     |
     */
     
-    .about-mascot-txt  {
+    .col {               
+        gap: 24px;
+    }
+
+    .feature, .feature p, .col.left .feature p, .col.left .feature span {
         text-align: center;
+    }
+
+    .feature span {
+        display: unset;
+    }
+
+    .bullet, .dot, #connectors {
+         display: none;
     }
 
     /*
     |---------------------------------------------------------
-    | ABOUT US SECTION                                 1024PX
+    | ABOUT US SECTION                                  568PX
     |---------------------------------------------------------
     |
     */
 
     .about-us-ui-lft-content {
         text-align: center;
+    }
+
+    /*
+    |---------------------------------------------------------
+    | RATINGS SECTION                                   568PX
+    |---------------------------------------------------------
+    |
+    */
+
+    .ratings-ui-rgt {
+        gap: 12px;
+        overflow-x: scroll;
+        grid-template-columns: unset;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
+
+    .rating-card {
+        min-width: 300px;
     }
 
     /*
